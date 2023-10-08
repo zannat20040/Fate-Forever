@@ -8,7 +8,7 @@ const Navbar = () => {
         to="/"
         style={({ isActive, isPending }) => {
           return {
-            color: isActive ? "DarkGoldenRod" : "white",
+            color: isActive ? "DarkGoldenRod" : "",
           };
         }}
         className={({ isActive, isPending }) => {
@@ -21,7 +21,7 @@ const Navbar = () => {
         to="/events"
         style={({ isActive, isPending }) => {
           return {
-            color: isActive ? "DarkGoldenRod" : "white",
+            color: isActive ? "DarkGoldenRod" : "",
           };
         }}
         className={({ isActive, isPending }) => {
@@ -34,7 +34,7 @@ const Navbar = () => {
         to="/packages"
         style={({ isActive, isPending }) => {
           return {
-            color: isActive ? "DarkGoldenRod" : "white",
+            color: isActive ? "DarkGoldenRod" : "",
           };
         }}
         className={({ isActive, isPending }) => {
@@ -47,7 +47,7 @@ const Navbar = () => {
         to="/custom"
         style={({ isActive, isPending }) => {
           return {
-            color: isActive ? "DarkGoldenRod" : "white",
+            color: isActive ? "DarkGoldenRod" : "",
           };
         }}
         className={({ isActive, isPending }) => {
@@ -60,7 +60,7 @@ const Navbar = () => {
         to="/profile"
         style={({ isActive, isPending }) => {
           return {
-            color: isActive ? "DarkGoldenRod" : "white",
+            color: isActive ? "DarkGoldenRod" : "",
           };
         }}
         className={({ isActive, isPending }) => {
@@ -94,21 +94,21 @@ const Navbar = () => {
           </label>
           <ul
             tabIndex={0}
-            className="menu menu-sm dropdown-content mt-3 z-[1] space-y-2 shadow bg-black p-4 w-52 "
+            className="menu menu-sm dropdown-content mt-3 z-[20] space-y-2 shadow bg-black p-4 w-52 "
           >
             {navList}
             
           </ul>
         </div>
-        <a className="font-semibold text-2xl sm:text-4xl  text-amber-600">FateForever</a>
+        <a className="font-semibold text-2xl sm:text-5xl  text-amber-600">FateForever</a>
       </div>
       <div className="navbar-center hidden lg:flex items-center">
-        <ul className="menu menu-horizontal px-1 space-x-4 text-base">
+        <ul className="menu menu-horizontal px-1 space-x-4 ">
           {navList}
         </ul>
       </div>
       <div className="navbar-end">
-        <a className="btn bg-amber-600 border-0 text-white items-center btn-sm ">
+        <a className="btn bg-amber-600 border-0 items-center btn-sm text-base">
           Register
         </a>
       </div>

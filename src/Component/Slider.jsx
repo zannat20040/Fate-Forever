@@ -1,28 +1,65 @@
-import React from 'react';
+import React from "react";
 // Import Swiper React components
-import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css/effect-cards';
-import 'swiper/css';
-import '../Custom css/style.css';
-import { EffectCards } from 'swiper/modules';
-
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css/effect-cards";
+import "swiper/css";
+import "../Custom css/style.css";
+import { EffectCards } from "swiper/modules";
 
 const Slider = () => {
-    return (
-        <>
-        <Swiper
-          effect={'cards'}
-          grabCursor={true}
-          modules={[EffectCards]}
-          className="mySwiper"
-        >
-          <SwiperSlide><img src="https://i.ibb.co/Y0qgMN5/white-bridal-wear.jpg" alt="" /></SwiperSlide>
-          <SwiperSlide><img src="https://i.ibb.co/jGX08rg/15.jpg" alt="" /></SwiperSlide>
-          <SwiperSlide><img src="https://i.ibb.co/0cgvDgq/e9cf8a7e1015662e1f9dd2474d39649d-medium.jpg" alt="" /></SwiperSlide>
-          <SwiperSlide><img src="https://i.ibb.co/SNBYJXv/img51.jpg" alt="" /></SwiperSlide>
-        </Swiper>
-      </>
-    );
+  const images = [
+    {
+      img: "https://i.ibb.co/3r9ZvbQ/113210-themomentmonks-295557523-144652934646724-3571924500731059762-n.jpg",
+    },
+    
+   
+    {
+      img: "https://i.ibb.co/ZT9PhBq/244042699-585003499588711-2975364875300523118-n-700x480.jpg",
+    },
+    {
+      img: "https://i.ibb.co/frDfXC7/Destination-Wedding.jpg",
+    },
+    {
+      img: "https://i.ibb.co/rtnPsdK/file-1631203102798-15-314215-163120310364457.jpg",
+    },
+    {
+      img: "https://i.ibb.co/3fHYnQ7/Indian-Destination-Wedding-Jennifer-and-Neal-Moon-Palace-Cancun-27.jpg",
+    },
+    {
+      img: "https://i.ibb.co/2spgJ6M/Kerala-dfdsdsf.jpg",
+    },
+    {
+      img: "https://i.ibb.co/gMqv6tJ/mexico-wedding-packages.jpg",
+    },
+    {
+      img: "https://i.ibb.co/Wx97MDT/RAH-5126-scaled.jpg",
+    },
+    {
+      img: "https://i.ibb.co/318S1Gb/22774-casa-malca-fine-art-studio-3.jpg",
+    },
+    {
+      img: "https://i.ibb.co/nnzNcyN/48493-pakistani-wedding-dresses-sabyasachi-lead.jpg",
+    },
+    {
+      img: "https://i.ibb.co/hZbtsWh/103587-weddingnama3.jpg",
+    },
+  ];
+  return (
+    <>
+      <Swiper
+        effect={"cards"}
+        grabCursor={true}
+        modules={[EffectCards]}
+        className="mySwiper"
+      >
+        {images.map((image,index) => (
+          <SwiperSlide key={index}>
+            <img src={image.img} alt="" />
+          </SwiperSlide>
+        ))}
+      </Swiper>
+    </>
+  );
 };
 
 export default Slider;

@@ -1,0 +1,98 @@
+[
+  {
+    "service_id": "1",
+    "service_name": "Venue Selection",
+    "img": "https://i.ibb.co/JzNNWYJ/LOrchard.jpg",
+    "price": "$3,000",
+    "short_description": "Find and manage your dream wedding venue with our expert guidance, from elegant ballrooms to picturesque outdoor settings. We handle bookings and coordination, making it stress-free.",
+    "long_description": "Discover the ideal setting for your special day with our Venue Selection and Management service. Our expert team specializes in helping you find the perfect location that aligns with your vision and budget. From elegant ballrooms to picturesque outdoor settings, we assist in selecting, booking, and coordinating all aspects of your chosen venue, taking the stress out of finding the ideal backdrop for your celebration. Our comprehensive venue management ensures a seamless experience from start to finish, leaving you free to focus on creating cherished memories.",
+    "features": [
+        "Comprehensive venue search and selection",
+        "Contract negotiation and booking management",
+        "Coordination of site visits",
+        "Venue layout and setup planning",
+        "Parking and transportation logistics",
+        "Assistance with permits and licenses"
+      ]
+  },
+  {
+    "service_id": "2",
+    "service_name": "Decor and Floral Design",
+    "img": "https://i.ibb.co/Wk1pPs0/59547893-641141796352179-8108756417893938041-n-1024x1024.jpg",
+    "price": "$1,800",
+    "short_description": "Transform your venue with stunning decor and floral arrangements tailored to your style and theme, creating an enchanting atmosphere that wows your guests.",
+    "long_description": "Transform your chosen venue into a breathtaking masterpiece with our Decor and Floral Design service. Our talented team collaborates closely with you to bring your unique vision to life, designing stunning decor elements and floral arrangements that leave a lasting impression on your guests. We specialize in creating enchanting atmospheres that reflect your style and theme, ensuring your wedding is a visual masterpiece.",
+    "features": [
+        "Personalized decor and floral consultation",
+        "Theme development and design conceptualization",
+        "Tablescapes and centerpieces",
+        "Ceremony and reception decor",
+        "Customized color schemes and lighting",
+        "Floral selection and arrangement"
+      ]
+  },
+  {
+    "service_id": "3",
+    "service_name": "Catering and Menu Planning",
+    "img": "https://i.ibb.co/pKL8XBS/shutterstock-782751154.jpg",
+    "price": "$5,500",
+    "short_description": "Delight your guests with a delectable feast customized to your tastes and dietary needs, ensuring a memorable dining experience for all.",
+    "long_description": "Delight your guests with a culinary experience tailored to your preferences and dietary needs through our Catering and Menu Planning service. We offer a diverse menu of gourmet dishes, appetizers, and desserts that ensure everyone enjoys a memorable dining experience. Our service reflects your tastes and preferences, from gourmet appetizers to customized menus catering to specific dietary requirements. Create culinary memories that leave a lasting impression on your guests.",
+    "features": [
+        "Customized menu creation",
+        "Tasting sessions to finalize menu choices",
+        "Dietary accommodations",
+        "Beverage selection and service",
+        "Professional catering staff",
+        "Buffet or plated meal options"
+      ]
+  },
+  {
+    "service_id": "4",
+    "service_name": "Vendor Coordination",
+    "img": "https://i.ibb.co/wLr2Wfx/how-long-does-it-take-to-edit-a-wedding-video.jpg",
+    "price": "$2,200",
+    "short_description": "We seamlessly manage all wedding vendors, ensuring they work in harmony to deliver their best, making your special day run smoothly.",
+    "long_description": "Leave the logistics to us with our Vendor Coordination service. We ensure seamless collaboration among all your wedding vendors, including photographers, videographers, musicians, and more. Your vendors will work in harmony to deliver their best, making your special day run smoothly. Our expert coordination ensures that every aspect of your celebration is in sync, leaving you stress-free to enjoy a seamless and memorable wedding day.",
+    "features": [
+        "Vendor selection assistance",
+        "Contract negotiation and management",
+        "Timely vendor payments",
+        "Scheduling and timeline coordination",
+        "On-site vendor supervision",
+        "Troubleshooting and problem-solving"
+      ]
+  },
+  {
+    "service_id": "5",
+    "service_name": "Wedding Styling and Beauty",
+    "img": "https://i.ibb.co/fXC0HDd/52669-beautiful-indian-dresses-dipikadeepclicks-roka.jpg",
+    "price": "$1,500",
+    "short_description": "Look and feel your best with our expert stylists and beauty professionals, ensuring you and your bridal party shine on your wedding day.",
+    "long_description": "Radiate confidence and beauty on your wedding day with our Wedding Styling and Beauty service. Our team of expert stylists, hair and makeup artists, and personal stylists is dedicated to making you feel like a radiant bride as you walk down the aisle. We ensure that you and your bridal party look stunning, leaving you feeling your best on this special day.",
+    "features": [
+        "Bridal hair and makeup trials",
+        "Bridal party styling",
+        "Groom and groomsmen grooming",
+        "On-site styling services",
+        "Bridal wardrobe assistance",
+        "Personal styling consultations"
+      ]
+  },
+  {
+    "service_id": "6",
+    "service_name": "Entertainment",
+    "img": "https://i.ibb.co/cwf8mZP/Collage-Fotor71.jpg",
+    "price": "$1,800",
+    "short_description": "Keep the party alive with top-notch entertainment options, including live bands, DJs, and more, creating a fun and memorable celebration for you and your guests.",
+    "long_description": "Elevate your celebration with our Entertainment service. Choose from a wide range of options, including live bands, DJs, and more, to keep your guests entertained and dancing throughout the night, creating unforgettable memories on your special day. Leave a lasting impression of joy and celebration with our entertainment choices",
+    "features": [
+        "Diverse entertainment options",
+        "Professional DJs and musicians",
+        "Customized playlists",
+        "Lighting and sound equipment",
+        "Dance floor setup",
+        "Interactive entertainment activities"
+      ]
+  }
+]
