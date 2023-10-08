@@ -9,11 +9,10 @@ const Service = () => {
       .then((res) => res.json())
       .then((data) => setManagementServices(data));
   }, []);
-  // console.log(managementServices);
 
   return (
     <div className="container mx-auto">
-      <h2 className="text-5xl my-11 font-semibold text-center text-pink-600">
+      <h2 className="text-5xl my-11 font-bold text-center text-rose-700">
         Our Services
       </h2>
 

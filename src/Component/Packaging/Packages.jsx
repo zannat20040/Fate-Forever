@@ -13,10 +13,10 @@ const Packages = () => {
     },[])
     return (
         <div className='container mx-auto'>
-            <h2 className="text-5xl mt-28 mb-11 text-pink-600 font-semibold text-center">
+            <h2 className="text-5xl mt-28 mb-11 text-rose-700 font-bold text-center">
         Our Packages
       </h2>
-            <div className='grid grid-cols-3 gap-6'>
+            <div className='grid  grid-cols-1 md:grid-cols-3 gap-6'>
                 {
                     allPackages.map(pack=>(
                         <PackageCard pack={pack} key={pack.package_id}></PackageCard>

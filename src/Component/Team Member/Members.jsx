@@ -44,7 +44,7 @@ const Members = () => {
 
   return (
     <div className="container mx-auto">
-      <h2 className="text-5xl mt-28 mb-11 font-semibold text-center text-pink-600">
+      <h2 className="text-5xl mt-28 mb-11 font-bold text-center text-rose-700">
         Our Team
       </h2>
 
