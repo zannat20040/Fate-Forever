@@ -1,6 +1,9 @@
 import React from 'react';
-import Banner from '../Component/Banner';
-import Service from '../Component/Service';
+import Banner from '../Component/Header/Banner';
+import Service from '../Component/Service/Service';
+import Footer from '../Component/Footer/Footer';
+import Packages from '../Component/Packaging/Packages';
+import Members from '../Component/Team Member/Members';
 
 
 const Home = () => {
@@ -8,6 +11,10 @@ const Home = () => {
         <div>
             <Banner></Banner>
             <Service></Service>
+            <Packages></Packages>
+            <Members></Members>
+            <Footer></Footer>
+
         </div>
     );
 };

@@ -3,7 +3,7 @@ import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css/effect-cards";
 import "swiper/css";
-import "../Custom css/style.css";
+import '../../Custom css/style.css'
 import { EffectCards } from "swiper/modules";
 
 const Slider = () => {

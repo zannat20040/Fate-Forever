@@ -1,0 +1,38 @@
+[
+    {
+      "package_id": "1",
+      "package_name": "Silver Package",
+      "description": "Our Silver Package offers essential wedding planning services for couples who want professional assistance to get started.",
+      "services_included": [
+        "Decor and Floral Design",
+        "Catering and Menu Planning"
+      ],
+      "price": "6,000"
+    },
+    {
+      "package_id": "2",
+      "package_name": "Gold Package",
+      "description": "Upgrade to the Gold Package for a more comprehensive wedding planning experience. It includes a wider range of services and customization options.",
+      "services_included": [
+        "Venue Selection and Management",
+        "Decor and Floral Design",
+        "Catering and Menu Planning",
+        "Vendor Coordination"
+      ],
+      "price": "10,000"
+    },
+    {
+      "package_id": "3",
+      "package_name": "Platinum Package",
+      "description": "Our Platinum Package is designed for couples who want a premium and all-inclusive wedding planning experience. It covers every detail for a truly luxurious event.",
+      "services_included": [
+        "Venue Selection and Management",
+        "Decor and Floral Design",
+        "Catering and Menu Planning",
+        "Vendor Coordination",
+        "Wedding Styling and Beauty",
+        "Entertainment"
+      ],
+      "price": "12,000"
+    }
+  ]

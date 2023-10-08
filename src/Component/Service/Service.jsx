@@ -9,17 +9,17 @@ const Service = () => {
       .then((res) => res.json())
       .then((data) => setManagementServices(data));
   }, []);
-  console.log(managementServices);
+  // console.log(managementServices);
 
   return (
     <div className="container mx-auto">
-      <h2 className="text-5xl py-9 font-semibold text-center">
+      <h2 className="text-5xl my-11 font-semibold text-center text-pink-600">
         Our Services
       </h2>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 ">
       {
-      managementServices.map(service=><ServiceCard service={service}></ServiceCard>)
+      managementServices.map(service=><ServiceCard service={service} key={service.service_id}></ServiceCard>)
       }
       </div>
     </div>

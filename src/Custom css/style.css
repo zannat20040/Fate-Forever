@@ -35,3 +35,16 @@ body {
   perspective: none;
 }
 
+.bg-soft-sky{
+  background-color: #f7e7f467;
+}
+
+.bg-pinky{
+  background-color: #C12A33;
+}
+.text-pinky{
+  color: #c1454b;
+}
+body{
+  background: none!important;
+}

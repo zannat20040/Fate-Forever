@@ -1,7 +1,6 @@
 import React from "react";
 
 const ServiceCard = ({ service }) => {
-  console.log(service);
   return (
     <div className="card bg-white  rounded-none shadow-md">
       <figure>
