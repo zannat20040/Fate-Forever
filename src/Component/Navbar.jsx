@@ -2,13 +2,13 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
-
   const navList = (
     <>
-      <NavLink to='/' 
+      <NavLink
+        to="/"
         style={({ isActive, isPending }) => {
           return {
-            color: isActive ? "PaleVioletRed" : "inherit",
+            color: isActive ? "DarkGoldenRod" : "white",
           };
         }}
         className={({ isActive, isPending }) => {
@@ -17,10 +17,11 @@ const Navbar = () => {
       >
         Home
       </NavLink>
-      <NavLink to='/events'
+      <NavLink
+        to="/events"
         style={({ isActive, isPending }) => {
           return {
-            color: isActive ? "PaleVioletRed" : "inherit",
+            color: isActive ? "DarkGoldenRod" : "white",
           };
         }}
         className={({ isActive, isPending }) => {
@@ -29,10 +30,11 @@ const Navbar = () => {
       >
         Events
       </NavLink>
-      <NavLink to='/packages'
+      <NavLink
+        to="/packages"
         style={({ isActive, isPending }) => {
           return {
-            color: isActive ? "PaleVioletRed" : "inherit",
+            color: isActive ? "DarkGoldenRod" : "white",
           };
         }}
         className={({ isActive, isPending }) => {
@@ -41,10 +43,11 @@ const Navbar = () => {
       >
         Packages
       </NavLink>
-      <NavLink to='/custom'
+      <NavLink
+        to="/custom"
         style={({ isActive, isPending }) => {
           return {
-            color: isActive ? "PaleVioletRed" : "inherit",
+            color: isActive ? "DarkGoldenRod" : "white",
           };
         }}
         className={({ isActive, isPending }) => {
@@ -53,10 +56,11 @@ const Navbar = () => {
       >
         Custom Package
       </NavLink>
-      <NavLink to='/profile'
+      <NavLink
+        to="/profile"
         style={({ isActive, isPending }) => {
           return {
-            color: isActive ? "PaleVioletRed" : "inherit",
+            color: isActive ? "DarkGoldenRod" : "white",
           };
         }}
         className={({ isActive, isPending }) => {
@@ -69,7 +73,7 @@ const Navbar = () => {
   );
 
   return (
-    <div className="navbar bg-base-100 ">
+    <div className="navbar container mx-auto ">
       <div className="navbar-start ">
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -78,7 +82,7 @@ const Navbar = () => {
               className="h-5 w-5"
               fill="none"
               viewBox="0 0 24 24"
-              stroke="currentColor"
+              stroke="white"
             >
               <path
                 strokeLinecap="round"
@@ -90,12 +94,13 @@ const Navbar = () => {
           </label>
           <ul
             tabIndex={0}
-            className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+            className="menu menu-sm dropdown-content mt-3 z-[1] space-y-2 shadow bg-black p-4 w-52 "
           >
-           { navList}
+            {navList}
+            
           </ul>
         </div>
-        <a className="font-semibold text-5xl text-pink-600">FateForever</a>
+        <a className="font-semibold text-2xl sm:text-4xl  text-amber-600">FateForever</a>
       </div>
       <div className="navbar-center hidden lg:flex items-center">
         <ul className="menu menu-horizontal px-1 space-x-4 text-base">
@@ -103,7 +108,9 @@ const Navbar = () => {
         </ul>
       </div>
       <div className="navbar-end">
-        <a className="btn bg-pink-600 text-white">Register</a>
+        <a className="btn bg-amber-600 border-0 text-white items-center btn-sm ">
+          Register
+        </a>
       </div>
     </div>
   );
