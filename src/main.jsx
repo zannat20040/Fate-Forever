@@ -12,6 +12,8 @@ import Home from "./Pages/Home";
 import ServiceDetails from "./Component/ServiceDetails.jsx/ServiceDetails";
 import WishList from "./Pages/WishList";
 import Custom from "./Pages/Custom";
+import Register from "./Component/SignUp/Register";
+import Login from "./Component/Login/Login";
 
 const router = createBrowserRouter([
   {
@@ -34,6 +36,14 @@ const router = createBrowserRouter([
       {
         path: "/custompackage",
         element: <Custom></Custom>
+      },
+      {
+        path: "/register",
+        element:<Register></Register>
+      },
+      {
+        path: "/login",
+        element:<Login></Login>
       },
     ],
   },

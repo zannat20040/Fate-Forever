@@ -1,6 +1,6 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
-import '../../Custom css/style.css'
+import { Link, NavLink } from "react-router-dom";
+import "../../Custom css/style.css";
 
 const Navbar = () => {
   const navList = (
@@ -31,7 +31,7 @@ const Navbar = () => {
       >
         Wishlist
       </NavLink>
-     
+
       <NavLink
         to="/custompackage"
         style={({ isActive, isPending }) => {
@@ -86,10 +86,11 @@ const Navbar = () => {
             className="menu menu-sm dropdown-content mt-3 z-[20]  space-y-2 shadow bg-rose-700 p-4 w-52 text-white "
           >
             {navList}
-            
           </ul>
         </div>
-        <a className="font-semibold text-2xl sm:text-5xl text-rose-700">FateForever</a>
+        <a className="font-semibold text-2xl sm:text-5xl text-rose-700">
+          FateForever
+        </a>
       </div>
       <div className="navbar-center hidden lg:flex items-center w-1/2 justify-center">
         <ul className="menu menu-horizontal px-1 space-x-4 flex items-center">
@@ -97,9 +98,7 @@ const Navbar = () => {
         </ul>
       </div>
       <div className="navbar-end">
-        <a className="btn bg-pinky border-0 items-center btn-sm text-white">
-          Register
-        </a>
+        <Link to="/register"  className="btn bg-pinky border-0 items-center btn-sm text-white">Register</Link>
       </div>
     </div>
   );
