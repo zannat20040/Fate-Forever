@@ -9,7 +9,7 @@ const Navbar = () => {
         to="/"
         style={({ isActive, isPending }) => {
           return {
-            color: isActive ? "text-pinky" : "",
+            color: isActive ? "" : "",
           };
         }}
         className={({ isActive, isPending }) => {
@@ -19,36 +19,24 @@ const Navbar = () => {
         Home
       </NavLink>
       <NavLink
-        to="/events"
+        to="/wishlist"
         style={({ isActive, isPending }) => {
           return {
-            color: isActive ? "text-pinky" : "",
+            color: isActive ? "" : "",
           };
         }}
         className={({ isActive, isPending }) => {
           return isActive ? "active" : isPending ? "pending" : "";
         }}
       >
-        Events
+        Wishlist
       </NavLink>
+     
       <NavLink
-        to="/packages"
+        to="/custompackage"
         style={({ isActive, isPending }) => {
           return {
-            color: isActive ? "text-pinky" : "",
-          };
-        }}
-        className={({ isActive, isPending }) => {
-          return isActive ? "active" : isPending ? "pending" : "";
-        }}
-      >
-        Packages
-      </NavLink>
-      <NavLink
-        to="/custom"
-        style={({ isActive, isPending }) => {
-          return {
-            color: isActive ? "pink" : "",
+            color: isActive ? "" : "",
           };
         }}
         className={({ isActive, isPending }) => {
@@ -61,7 +49,7 @@ const Navbar = () => {
         to="/profile"
         style={({ isActive, isPending }) => {
           return {
-            color: isActive ? "text-pinky" : "",
+            color: isActive ? "" : "",
           };
         }}
         className={({ isActive, isPending }) => {
@@ -104,7 +92,7 @@ const Navbar = () => {
         <a className="font-semibold text-2xl sm:text-5xl text-rose-700">FateForever</a>
       </div>
       <div className="navbar-center hidden lg:flex items-center w-1/2 justify-center">
-        <ul className="menu menu-horizontal px-1 space-x-4 ">
+        <ul className="menu menu-horizontal px-1 space-x-4 flex items-center">
           {navList}
         </ul>
       </div>

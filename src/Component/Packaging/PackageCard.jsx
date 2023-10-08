@@ -2,9 +2,9 @@ import React from "react";
 import { BsCheckCircle } from "react-icons/bs";
 
 const PackageCard = ({pack}) => {
-  console.log(pack)
+  // console.log(pack)
   return (
-    <div className="card bg-white rounded-none shadow-md border-t-8 border-rose-700">
+    <div className="card bg-white  shadow-md border-t-8 border-rose-700 rounded-md">
       <div className="card-body text-base">
         <div>
         <h2 className="card-title text-2xl">{pack.package_name}</h2>

@@ -1,14 +1,16 @@
-import React from 'react';
-import { Outlet } from 'react-router-dom';
-import Navbar from '../Component/Header/Navbar';
+import React from "react";
+import { Outlet } from "react-router-dom";
+import Navbar from "../Component/Header/Navbar";
 
 const Root = () => {
-    return (
-        <div>
-            <Navbar></Navbar>
-            <Outlet></Outlet>
-        </div>
-    );
+  return (
+    <>
+      <div className="sticky top-0 z-40 bg-rose-100  py-3">
+        <Navbar></Navbar>
+      </div>
+      <Outlet></Outlet>
+    </>
+  );
 };
 
 export default Root;

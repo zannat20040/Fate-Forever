@@ -45,6 +45,12 @@ body {
 .text-pinky{
   color: #c1454b;
 }
+.active{
+  background-color: #c1454b;
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: white;
+}
 body{
   background: none!important;
 }

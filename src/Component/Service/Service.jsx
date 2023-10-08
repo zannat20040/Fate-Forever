@@ -12,7 +12,7 @@ const Service = () => {
 
   return (
     <div className="container mx-auto">
-      <h2 className="text-5xl my-11 font-bold text-center text-rose-700">
+      <h2 className="text-5xl mt-5 mb-11 font-bold text-center text-rose-700">
         Our Services
       </h2>
 

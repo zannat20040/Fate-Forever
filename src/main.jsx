@@ -9,6 +9,9 @@ import {
 } from "react-router-dom";
 import Root from "./Pages/Root";
 import Home from "./Pages/Home";
+import ServiceDetails from "./Component/ServiceDetails.jsx/ServiceDetails";
+import WishList from "./Pages/WishList";
+import Custom from "./Pages/Custom";
 
 const router = createBrowserRouter([
   {
@@ -18,6 +21,19 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
+      },
+      {
+        path: "/service/:id",
+        element: <ServiceDetails></ServiceDetails>,
+        loader:()=>fetch('/service.json')
+      },
+      {
+        path: "/wishlist",
+        element: <WishList></WishList>
+      },
+      {
+        path: "/custompackage",
+        element: <Custom></Custom>
       },
     ],
   },
