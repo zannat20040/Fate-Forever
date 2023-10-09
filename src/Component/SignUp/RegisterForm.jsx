@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const RegisterForm = ({handleRegister, registerError, registerSuccess}) => {
+const RegisterForm = ({handleRegister, registerSuccess}) => {
     return (
         <div className="hero py-11">
 
@@ -61,11 +61,6 @@ const RegisterForm = ({handleRegister, registerError, registerSuccess}) => {
               </div>
             )}
 
-            {registerError && (
-              <div>
-                <p className="font-medium text-red-500 mt-3">{registerError}</p>
-              </div>
-            )}
           
           </form>
 

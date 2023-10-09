@@ -33,8 +33,8 @@ const PackageCard = ({pack}) => {
         <p className=" text-rose-700 text-lg font-semibold ">Package Included:</p>
         <ul className=" mt-5">
           {
-            pack.services_included.map(data=>(
-              <li className="flex gap-3 items-center"><BsCheckCircle className="text-rose-700" ></BsCheckCircle> {data} </li>
+            pack.services_included.map((data,index)=>(
+              <li className="flex gap-3 items-center" key={index}><BsCheckCircle className="text-rose-700" ></BsCheckCircle> {data} </li>
             ))
           }
         </ul>

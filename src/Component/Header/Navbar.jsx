@@ -1,14 +1,26 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import "../../Custom css/style.css";
 import { AuthContext } from "../../Auth Component/AuthProvider";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Navbar = () => {
   const { user, signOutUser } = useContext(AuthContext);
+
   const HandleSignOut = () => {
     signOutUser()
       .then(() => {
-        console.log("logout success");
+        toast.success('Log Out successfully', {
+          position: "bottom-right",
+          autoClose: 1000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "dark",
+        });
       })
       .catch((error) => {
         console.log(error);
@@ -55,27 +67,15 @@ const Navbar = () => {
           return isActive ? "active" : isPending ? "pending" : "";
         }}
       >
-        Custom Package
-      </NavLink>
-      <NavLink
-        to="/register"
-        style={({ isActive, isPending }) => {
-          return {
-            color: isActive ? "" : "",
-          };
-        }}
-        className={({ isActive, isPending }) => {
-          return isActive ? "active" : isPending ? "pending" : "";
-        }}
-      >
-        Register
+        Customaize
       </NavLink>
     </>
   );
 
   return (
-    <div className="navbar container mx-auto ">
-      <div className="navbar-start ">
+    <div className="navbar container mx-auto items-center flex-col space-y-3  md:space-y-0 flex md:flex-row">
+      <ToastContainer></ToastContainer>
+      <div className="navbar-start w-full justify-evenly">
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost lg:hidden bg-rose-700">
             <svg
@@ -98,62 +98,59 @@ const Navbar = () => {
             className="menu menu-sm dropdown-content mt-3 z-[20]  space-y-2 shadow bg-rose-700 p-4 w-52 text-white "
           >
             {navList}
-            {
-            user && <NavLink
-            to="/profile"
-            style={({ isActive, isPending }) => {
-              return {
-                color: isActive ? "" : "",
-              };
-            }}
-            className={({ isActive, isPending }) => {
-              return isActive ? "active" : isPending ? "pending" : "";
-            }}
-          >
-            {user?.displayName}
-          </NavLink>
-          }
           </ul>
         </div>
-        <a className="font-semibold text-2xl sm:text-5xl text-rose-700">
+        <a className="ml-3 normal-case text-2xl font-extrabold text-rose-700">
           FateForever
         </a>
       </div>
+
       <div className="navbar-center hidden lg:flex items-center w-1/2 justify-center">
         <ul className="menu menu-horizontal px-1 space-x-4 flex items-center">
           {navList}
-          {
-            user && <NavLink
-            to="/profile"
-            style={({ isActive, isPending }) => {
-              return {
-                color: isActive ? "" : "",
-              };
-            }}
-            className={({ isActive, isPending }) => {
-              return isActive ? "active" : isPending ? "pending" : "";
-            }}
-          >
-            {user?.displayName}
-          </NavLink>
-          }
         </ul>
       </div>
-      <div className="navbar-end">
+
+      <div className="navbar-end gap-4 items-center w-full justify-center">
         {user ? (
-          <button
-            className="btn mt-2 text-white btn-sm bg-rose-700 border-0 hover:bg-black hover:text-white"
-            onClick={HandleSignOut}
-          >
-            Sign out
-          </button>
+          <>
+            <div className="avatar flex gap-3 items-center">
+              <NavLink
+                to="/profile"
+                style={({ isActive, isPending }) => {
+                  return {
+                    color: isActive ? "" : "",
+                  };
+                }}
+                className={({ isActive, isPending }) => {
+                  return isActive ? "active" : isPending ? "pending" : "";
+                }}
+              >
+                {user?.displayName}
+              </NavLink>
+              <div className="w-12 rounded-full ">
+                <img src={user.photoURL} />
+              </div>
+            </div>
+          </>
         ) : (
-          <Link
-            to="/login"
-            className="btn btn-sm mt-2 text-white bg-rose-700 border-0 hover:bg-black hover:text-white"
-          >
-            Log in
+          <Link to="/register">
+    
+            <button className="btn btn-sm border-0 mt-4 bg-rose-700 hover:bg-black text-white">Register</button>
           </Link>
+        )}
+
+        {user ? (
+          <Link to="/" onClick={HandleSignOut}>
+    
+          <button className="btn btn-sm border-0 bg-rose-700 hover:bg-black text-white" >Log Out</button>
+        </Link>
+          
+        ) : (
+          <Link to="/login" >
+    
+          <button className="btn btn-sm border-0  mt-4 bg-rose-700 hover:bg-black text-white">Log In</button>
+        </Link>
         )}
       </div>
     </div>

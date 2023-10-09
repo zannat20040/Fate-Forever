@@ -15,8 +15,8 @@ const MemberCard = ({member}) => {
           <p>Work since, {member.experience}</p>
           <ul>
             {
-              member.expertise.map(data=>(
-                <span>{data}, </span>
+              member.expertise.map((data,index)=>(
+                <span key={index}>{data}, </span>
               ))
             }
           </ul>

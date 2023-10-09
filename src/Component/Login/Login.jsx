@@ -2,6 +2,8 @@ import React, { useContext, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import LoginForm from "./LoginForm";
 import { AuthContext } from "../../Auth Component/AuthProvider";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Login = () => {
 
@@ -19,14 +21,35 @@ const Login = () => {
     loginUser(email, password)
       .then((userCredential) => {
         const user = userCredential.user;
-        console.log("login succes", user);
+
         e.target.reset();
         navigate(location?.state ?location.state : '/')
-        setLogin(true);
+        
+        toast.success("Log in success", {
+          position: "bottom-right",
+          autoClose: 1000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "dark",
+        });
       })
       .catch((error) => {
+        e.target.reset();
         const errorMessage = error.message;
-        // console.log(errorMessage);
+        
+        toast.error(errorMessage, {
+          position: "bottom-right",
+          autoClose: 1000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "dark",
+        });
       });
 
      
@@ -46,7 +69,7 @@ const Login = () => {
     })
     .catch((error) => {
       const errorMessage = error.message;
-      console.log(errorMessage)
+      setLogin(false);
     });
 
 
@@ -60,12 +83,13 @@ const Login = () => {
     })
     .catch((error) => {
       const errorMessage = error.message;
-      console.log(errorMessage)
+      setLogin(false);
     });
   }
 
   return (
     <div>
+      <ToastContainer></ToastContainer>
       <LoginForm HandleLogin={HandleLogin} GoogleSignInHandler={GoogleSignInHandler}></LoginForm>
     </div>
   );

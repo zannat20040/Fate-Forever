@@ -2,7 +2,7 @@
 
 const Cart = ({ cardItem }) => {
 
-  console.log(cardItem)
+  // console.log(cardItem)
     let sum = 0;
 
 

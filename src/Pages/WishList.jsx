@@ -8,7 +8,7 @@ const WishList = () => {
     const wishList = JSON.parse(localStorage.getItem("Interested list"));
     setDisplayWishlist(wishList);
   }, []);
-  // console.log(displayWishlist)
+ 
 
   return (
     <div className="container mx-auto py-16">
