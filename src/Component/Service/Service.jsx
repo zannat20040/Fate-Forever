@@ -11,7 +11,7 @@ const Service = () => {
   }, []);
 
   return (
-    <div className="container mx-auto">
+    <div className="container mx-auto" data-aos="fade-up">
       <h2 className="text-5xl mt-5 mb-11 font-bold text-center text-rose-700">
         Our Services
       </h2>

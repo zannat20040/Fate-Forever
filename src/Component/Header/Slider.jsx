@@ -46,7 +46,7 @@ const Slider = () => {
   ];
   return (
     <>
-      <Swiper
+      <Swiper data-aos='fade-down'
         effect={"cards"}
         grabCursor={true}
         modules={[EffectCards]}
