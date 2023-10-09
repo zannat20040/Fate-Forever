@@ -2,6 +2,8 @@ import React from "react";
 import { useLoaderData, useParams } from "react-router-dom";
 import { GrWaypoint } from "react-icons/gr";
 import { TbJewishStar } from "react-icons/tb";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const ServiceDetails = () => {
   const { id } = useParams();
@@ -36,6 +38,18 @@ const ServiceDetails = () => {
     
   };
     
+  const FavouriteHandle=()=>{
+    toast.success("Added into Wishlist", {
+      position: "bottom-right",
+      autoClose: 1000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "dark",
+    });
+  }
 
     return (
       <div className="card bg-base-100 shadow-xl">
@@ -66,8 +80,9 @@ const ServiceDetails = () => {
               <span className="text-lg">Cost: $</span>
               {findDetails.price}
             </p>
+                <ToastContainer></ToastContainer>
             <button className=" btn-sm btn bg-white rounded-md shadow-md w-fit focus:bg-rose-700 focus:text-white" onClick={HandleWish} >
-                <TbJewishStar></TbJewishStar>
+                <TbJewishStar onClick={FavouriteHandle}></TbJewishStar>
             </button>
           </div>
 

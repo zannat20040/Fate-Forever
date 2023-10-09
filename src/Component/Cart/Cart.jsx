@@ -1,4 +1,6 @@
 // import React, { useState } from "react";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Cart = ({ cardItem }) => {
 
@@ -12,6 +14,18 @@ const Cart = ({ cardItem }) => {
       })
       // console.log(sum)
    
+      const HandleCustom=()=>{
+        toast.success('Your custom packages has been successfully purchased', {
+          position: "bottom-right",
+          autoClose: 1000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "dark",
+        });
+      }
 
   return (
     <div className="bg-white h-fit">
@@ -37,7 +51,7 @@ const Cart = ({ cardItem }) => {
       <p>Total: </p>
       <span>{sum}</span>
       </div>
-      <button className="btn btn-primary w-full mt-5 text-white bg-rose-700 border-0 hover:bg-black hover:text-white">Purchase</button>
+      <button  onClick={HandleCustom} className="btn btn-primary w-full mt-5 text-white bg-rose-700 border-0 hover:bg-black hover:text-white">Purchase</button>
       </div>
       </div>
       </div>

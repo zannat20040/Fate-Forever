@@ -52,7 +52,7 @@ const Register = () => {
       .then(() => {
         e.target.reset();
 
-        toast.success("Purchase Success", {
+        toast.success("Resgister successfully", {
           position: "bottom-right",
           autoClose: 1000,
           hideProgressBar: false,

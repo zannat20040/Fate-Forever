@@ -16,12 +16,13 @@ import Register from "./Component/SignUp/Register";
 import Login from "./Component/Login/Login";
 import PrivateRoute from "./Pages/PrivateRoute";
 import AuthProvider from "./Auth Component/AuthProvider";
-import errorPage from "./errorPage";
+import ErrorPage from "./errorPage";
+
 
 const router = createBrowserRouter([
   {
     path: "/",
-    errorElement:errorPage,
+    errorElement:<ErrorPage></ErrorPage>,
     element: <Root></Root>,
     children: [
       {

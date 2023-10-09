@@ -7,7 +7,6 @@ const Root = () => {
     <>
       <div className="sticky top-0 z-40 bg-rose-100  py-3">
         <Navbar></Navbar>
-        {/* <Navbar2></Navbar2> */}
       </div>
       <Outlet></Outlet>
     </>

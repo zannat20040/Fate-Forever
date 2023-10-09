@@ -11,7 +11,7 @@ const Navbar = () => {
   const HandleSignOut = () => {
     signOutUser()
       .then(() => {
-        toast.success('Log Out successfully', {
+        toast.error('Log Out successfully', {
           position: "bottom-right",
           autoClose: 1000,
           hideProgressBar: false,

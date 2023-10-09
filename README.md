@@ -1,8 +1,19 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## FateForever wedding management website
 
-Currently, two official plugins are available:
+Insert gif or link to demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+
+## Features
+
+- User registration and login functionality.
+- OAuth authentication with popular social platforms (Google)for quick access.
+- Strong password authentication.
+- Create custom wedding packages according to your unique preferences.
+- Real-time cost calculation based on your selections.
+- Responsive design
+-  Detailed service descriptions, pricing, and vendor information.
+- Easy access to your wishlist for reviewing and making final decisions.
+- Dynamic routing for service details, making navigation seamless.
+- 404 page for handling unmatched routes.
+
