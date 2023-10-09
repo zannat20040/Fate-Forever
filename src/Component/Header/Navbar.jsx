@@ -110,7 +110,7 @@ const Navbar = () => {
               return isActive ? "active" : isPending ? "pending" : "";
             }}
           >
-            Profile
+            {user?.displayName}
           </NavLink>
           }
           </ul>
@@ -134,7 +134,7 @@ const Navbar = () => {
               return isActive ? "active" : isPending ? "pending" : "";
             }}
           >
-            Profile
+            {user?.displayName}
           </NavLink>
           }
         </ul>
