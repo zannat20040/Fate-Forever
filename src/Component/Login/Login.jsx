@@ -1,12 +1,14 @@
 import React, { useContext, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import LoginForm from "./LoginForm";
 import { AuthContext } from "../../Auth Component/AuthProvider";
 
 const Login = () => {
 
-  const { loginUser,createUserByGoogle } = useContext(AuthContext);
+  const { loginUser,createUserByGoogle, googleSignOut } = useContext(AuthContext);
   const navigate = useNavigate();
+  const location = useLocation()
+
 
   const HandleLogin = (e) => {
     e.preventDefault();
@@ -19,12 +21,12 @@ const Login = () => {
         const user = userCredential.user;
         console.log("login succes", user);
         e.target.reset();
-        navigate("/");
+        navigate(location?.state ?location.state : '/')
         setLogin(true);
       })
       .catch((error) => {
         const errorMessage = error.message;
-        console.log(errorMessage);
+        // console.log(errorMessage);
       });
 
      
@@ -36,6 +38,20 @@ const Login = () => {
     .then((userCredential) => {
 
       const user = userCredential.user;
+      console.log('Registration success' , user)
+      e.target.reset();
+      navigate(location?.state ?location.state : '/')
+      setLogin(true);
+
+    })
+    .catch((error) => {
+      const errorMessage = error.message;
+      console.log(errorMessage)
+    });
+
+
+    googleSignOut()
+    .then((userCredential) => {
       console.log('Registration success' , user)
       e.target.reset();
       navigate("/");

@@ -63,7 +63,7 @@ const ServiceDetails = () => {
 
           <div className="font-semibold w-full flex items-center mt-5">
             <p className="text-left text-lg">
-              <span className="text-lg">Cost: </span>
+              <span className="text-lg">Cost: $</span>
               {findDetails.price}
             </p>
             <button className=" btn-sm btn bg-white rounded-md shadow-md w-fit focus:bg-rose-700 focus:text-white" onClick={HandleWish} >

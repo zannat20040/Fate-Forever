@@ -16,10 +16,13 @@ import Register from "./Component/SignUp/Register";
 import Login from "./Component/Login/Login";
 import PrivateRoute from "./Pages/PrivateRoute";
 import AuthProvider from "./Auth Component/AuthProvider";
+import Profile from "./Pages/Profile";
+import errorPage from "./errorPage";
 
 const router = createBrowserRouter([
   {
     path: "/",
+    errorElement:errorPage,
     element: <Root></Root>,
     children: [
       {
@@ -46,6 +49,10 @@ const router = createBrowserRouter([
       {
         path: "/login",
         element:<Login></Login>
+      },
+      {
+        path: "/profile",
+        element:<PrivateRoute><Profile></Profile></PrivateRoute>
       },
     ],
   },

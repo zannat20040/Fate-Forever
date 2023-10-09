@@ -1,26 +1,27 @@
-import React, { useEffect, useState } from 'react';
-import WishListCard from '../Component/Wishlist/WishListCard';
+import React, { useEffect, useState } from "react";
+import WishListCard from "../Component/Wishlist/WishListCard";
 
 const WishList = () => {
-    const [displayWishlist, setDisplayWishlist] = useState([]);
+  const [displayWishlist, setDisplayWishlist] = useState([]);
 
   useEffect(() => {
     const wishList = JSON.parse(localStorage.getItem("Interested list"));
     setDisplayWishlist(wishList);
   }, []);
-  console.log(displayWishlist)
+  // console.log(displayWishlist)
 
-    return (
-    <div className='container mx-auto py-16'>
-        <div className='grid grid-cols-3 gap-6 '>
-        {
-        displayWishlist.map((item,index)=>(
-            <WishListCard item={item} key={index}></WishListCard>
-        ))
-    }
+  return (
+    <div className="container mx-auto py-16">
+      {
+          displayWishlist? <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 ">
+            {displayWishlist.map((item, index) => (
+          <WishListCard item={item} key={index}></WishListCard>
+        ))}
+          </div> : <p>No favourite item added</p>
+        }
+    
     </div>
-    </div>
-    );
+  );
 };
 
 export default WishList;

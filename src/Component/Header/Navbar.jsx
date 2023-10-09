@@ -142,7 +142,7 @@ const Navbar = () => {
       <div className="navbar-end">
         {user ? (
           <button
-            className="btn bg-pinky border-0 items-center btn-sm text-white"
+            className="btn mt-2 text-white btn-sm bg-rose-700 border-0 hover:bg-black hover:text-white"
             onClick={HandleSignOut}
           >
             Sign out
@@ -150,7 +150,7 @@ const Navbar = () => {
         ) : (
           <Link
             to="/login"
-            className="btn bg-pinky border-0 items-center btn-sm text-white"
+            className="btn btn-sm mt-2 text-white bg-rose-700 border-0 hover:bg-black hover:text-white"
           >
             Log in
           </Link>

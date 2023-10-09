@@ -16,7 +16,7 @@ const Banner = () => {
             reality. From intimate gatherings to grand celebrations, we are your
             trusted partner in crafting the perfect wedding experience. 
           </p>
-          <button className="btn bg-rose-700 text-white border-0 items-center ">
+          <button className="btn btn-primary mt-2 text-white bg-rose-700 border-0 hover:bg-black hover:text-white ">
             Explore Us
           </button>
         </div>

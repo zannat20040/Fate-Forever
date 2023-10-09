@@ -4,49 +4,61 @@ import {
   createUserWithEmailAndPassword,
   onAuthStateChanged,
   signInWithEmailAndPassword,
-  signOut, signInWithPopup, GoogleAuthProvider
+  signOut,
+  signInWithPopup,
+  GoogleAuthProvider,
 } from "firebase/auth";
 
 export const AuthContext = createContext(null);
 
 const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
-  const [loading, setLoading] = useState(true)
+  const [loading, setLoading] = useState(true);
   const provider = new GoogleAuthProvider();
 
   const createUser = (email, password) => {
-    setLoading(true)
+    setLoading(true);
     return createUserWithEmailAndPassword(auth, email, password);
   };
   const createUserByGoogle = () => {
-    setLoading(true)
+    setLoading(true);
     return signInWithPopup(auth, provider);
   };
   const loginUser = (email, password) => {
-    setLoading(true)
+    setLoading(true);
     return signInWithEmailAndPassword(auth, email, password);
   };
 
-  const signOutUser = ()=>{
-        setLoading(true)
-    return signOut(auth)
-  }
+  const signOutUser = () => {
+    setLoading(true);
+    return signOut(auth);
+  };
+
+  const googleSignOut = () => {
+    setLoading(true);
+
+    return signOut(auth);
+  };
 
   useEffect(() => {
-    const unSubscribe = onAuthStateChanged(auth, currentUser=> {
-      if (currentUser) {
-        setUser(currentUser);
-        setLoading(false)
-      } else {
-        setUser(null)
-      }
+    const unSubscribe = onAuthStateChanged(auth, (currentUser) => {
+      setUser(currentUser);
+      setLoading(false);
     });
     return () => {
       unSubscribe();
     };
   }, []);
 
-  const authInfo = { user, createUser, signOutUser, loginUser, loading , createUserByGoogle};
+  const authInfo = {
+    user,
+    createUser,
+    signOutUser,
+    loginUser,
+    loading,
+    createUserByGoogle,
+    googleSignOut
+  };
 
   return (
     <AuthContext.Provider value={authInfo}>{children}</AuthContext.Provider>
@@ -54,4 +66,3 @@ const AuthProvider = ({ children }) => {
 };
 
 export default AuthProvider;
-

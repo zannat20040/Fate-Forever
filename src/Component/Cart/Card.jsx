@@ -23,8 +23,8 @@ const Card = () => {
 
 //   console.log(cardItem);
   return (
-    <div className=" flex gap-2 justify-around py-8 container mx-auto ">
-        <div className="space-y-6  w-2/3">
+    <div className="grid grid-cols-1 md:flex gap-2 justify-around py-8 container mx-auto ">
+        <div className="space-y-6  w-full md:w-2/3">
         {allCard.map((item) => (
           <div className=" flex bg-base-100 shadow-xl">
             <figure className="w-2/5">
@@ -43,7 +43,7 @@ const Card = () => {
               </ul>
               <div className="card-actions justify-start mt-5">
                 <button
-                  className="btn btn-primary w-1/2 bg-rose-700 text-white border-0"
+                  className="btn btn-primary w-1/2 mt-2 text-white bg-rose-700 border-0 hover:bg-black hover:text-white"
                   onClick={() => HandleCustomPack(item)}
                 >
                   Add
