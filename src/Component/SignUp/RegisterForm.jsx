@@ -51,6 +51,7 @@ const RegisterForm = ({handleRegister}) => {
             <div className="form-control mt-6">
               <button className="btn btn-primary w-full mt-2 text-white bg-rose-700 border-0 hover:bg-black hover:text-white">Register</button>
             </div>
+            
             <p>Have account? <Link to='/login' className='font-bold text-rose-700'>Log in</Link></p>
           </form>
         </div>

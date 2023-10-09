@@ -27,8 +27,13 @@ const Register = () => {
         const errorMessage = error.message;
         console.log(errorMessage)
       });
+
+    
+
+
   };
 
+  
     return (
         <div>
             <RegisterForm handleRegister={handleRegister}></RegisterForm>

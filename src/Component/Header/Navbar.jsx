@@ -1,8 +1,20 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
 import "../../Custom css/style.css";
+import { AuthContext } from "../../Auth Component/AuthProvider";
 
 const Navbar = () => {
+  const { user, signOutUser } = useContext(AuthContext);
+  const HandleSignOut = () => {
+    signOutUser()
+      .then(() => {
+        console.log("logout success");
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
+
   const navList = (
     <>
       <NavLink
@@ -46,7 +58,7 @@ const Navbar = () => {
         Custom Package
       </NavLink>
       <NavLink
-        to="/profile"
+        to="/register"
         style={({ isActive, isPending }) => {
           return {
             color: isActive ? "" : "",
@@ -56,7 +68,7 @@ const Navbar = () => {
           return isActive ? "active" : isPending ? "pending" : "";
         }}
       >
-        Profile
+        Register
       </NavLink>
     </>
   );
@@ -86,6 +98,21 @@ const Navbar = () => {
             className="menu menu-sm dropdown-content mt-3 z-[20]  space-y-2 shadow bg-rose-700 p-4 w-52 text-white "
           >
             {navList}
+            {
+            user && <NavLink
+            to="/profile"
+            style={({ isActive, isPending }) => {
+              return {
+                color: isActive ? "" : "",
+              };
+            }}
+            className={({ isActive, isPending }) => {
+              return isActive ? "active" : isPending ? "pending" : "";
+            }}
+          >
+            Profile
+          </NavLink>
+          }
           </ul>
         </div>
         <a className="font-semibold text-2xl sm:text-5xl text-rose-700">
@@ -95,10 +122,39 @@ const Navbar = () => {
       <div className="navbar-center hidden lg:flex items-center w-1/2 justify-center">
         <ul className="menu menu-horizontal px-1 space-x-4 flex items-center">
           {navList}
+          {
+            user && <NavLink
+            to="/profile"
+            style={({ isActive, isPending }) => {
+              return {
+                color: isActive ? "" : "",
+              };
+            }}
+            className={({ isActive, isPending }) => {
+              return isActive ? "active" : isPending ? "pending" : "";
+            }}
+          >
+            Profile
+          </NavLink>
+          }
         </ul>
       </div>
       <div className="navbar-end">
-        <Link to="/register"  className="btn bg-pinky border-0 items-center btn-sm text-white">Register</Link>
+        {user ? (
+          <button
+            className="btn bg-pinky border-0 items-center btn-sm text-white"
+            onClick={HandleSignOut}
+          >
+            Sign out
+          </button>
+        ) : (
+          <Link
+            to="/login"
+            className="btn bg-pinky border-0 items-center btn-sm text-white"
+          >
+            Log in
+          </Link>
+        )}
       </div>
     </div>
   );

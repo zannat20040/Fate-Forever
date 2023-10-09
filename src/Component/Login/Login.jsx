@@ -5,7 +5,7 @@ import { AuthContext } from "../../Auth Component/AuthProvider";
 
 const Login = () => {
 
-  const { loginUser } = useContext(AuthContext);
+  const { loginUser,createUserByGoogle } = useContext(AuthContext);
   const navigate = useNavigate();
 
   const HandleLogin = (e) => {
@@ -26,11 +26,31 @@ const Login = () => {
         const errorMessage = error.message;
         console.log(errorMessage);
       });
+
+     
   };
+
+  const GoogleSignInHandler=(e)=>{
+    e.preventDefault();
+    createUserByGoogle()
+    .then((userCredential) => {
+
+      const user = userCredential.user;
+      console.log('Registration success' , user)
+      e.target.reset();
+      navigate("/");
+      setLogin(true);
+
+    })
+    .catch((error) => {
+      const errorMessage = error.message;
+      console.log(errorMessage)
+    });
+  }
 
   return (
     <div>
-      <LoginForm HandleLogin={HandleLogin}></LoginForm>
+      <LoginForm HandleLogin={HandleLogin} GoogleSignInHandler={GoogleSignInHandler}></LoginForm>
     </div>
   );
 };
