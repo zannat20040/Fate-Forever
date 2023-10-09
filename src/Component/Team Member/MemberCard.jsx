@@ -1,7 +1,7 @@
 import React from "react";
 
 const MemberCard = ({member}) => {
-    console.log(member)
+    // console.log(member)
   return (
     <div className="text-base text-center">
       <div className="avatar">

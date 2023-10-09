@@ -14,6 +14,8 @@ import WishList from "./Pages/WishList";
 import Custom from "./Pages/Custom";
 import Register from "./Component/SignUp/Register";
 import Login from "./Component/Login/Login";
+import PrivateRoute from "./Pages/PrivateRoute";
+import AuthProvider from "./Auth Component/AuthProvider";
 
 const router = createBrowserRouter([
   {
@@ -26,16 +28,16 @@ const router = createBrowserRouter([
       },
       {
         path: "/service/:id",
-        element: <ServiceDetails></ServiceDetails>,
+        element: <PrivateRoute><ServiceDetails></ServiceDetails></PrivateRoute>,
         loader:()=>fetch('/service.json')
       },
       {
         path: "/wishlist",
-        element: <WishList></WishList>
+        element: <PrivateRoute><WishList></WishList></PrivateRoute>
       },
       {
         path: "/custompackage",
-        element: <Custom></Custom>
+        element: <PrivateRoute><Custom></Custom></PrivateRoute>
       },
       {
         path: "/register",
@@ -51,6 +53,8 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
+    <AuthProvider>
     <RouterProvider router={router} />
+    </AuthProvider>
   </React.StrictMode>
 );

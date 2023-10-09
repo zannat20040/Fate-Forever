@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const LoginForm = ({HandleLogin}) => {
   return (
-    <div className="hero min-h-screen bg-base-200">
+    <div className="hero py-5">
       <div className="card flex-shrink-0 w-full max-w-md shadow-2xl bg-base-100">
         <form className="card-body" onSubmit={HandleLogin}>
           <div className="form-control">
@@ -32,11 +32,7 @@ const LoginForm = ({HandleLogin}) => {
               required
               name="password"
             />
-            <label className="label">
-              <a href="#" className="label-text-alt link link-hover">
-                Forgot password?
-              </a>
-            </label>
+            
           </div>
           <div className="form-control mt-6">
             <button className="btn btn-primary w-full mt-2 text-white bg-rose-700 border-0 hover:bg-black hover:text-white">Login</button>
