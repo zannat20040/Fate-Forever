@@ -1,9 +1,6 @@
 
 ## FateForever wedding management website
 
-fateforever-4c243.web.app
-
-
 ## Features
 
 - User registration and login functionality.
@@ -17,3 +14,7 @@ fateforever-4c243.web.app
 - Dynamic routing for service details, making navigation seamless.
 - 404 page for handling unmatched routes.
 
+## 🔗 Links
+
+* Client site repo: https://github.com/zannat20040/Fate-Forever
+* Live site: https://fateforever-4c243.web.app/
